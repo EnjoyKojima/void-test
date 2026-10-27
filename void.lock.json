@@ -3,7 +3,16 @@
   "source": {},
   "resolved": {
     "account_id": "e4b1dc11b2e662580eb67ecc5141d582",
-    "compatibility_date": "2026-02-24"
+    "compatibility_date": "2026-02-24",
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "void-test-db",
+        "database_id": "98886566-7fb8-4026-9701-87ccdf66102b",
+        "migrations_dir": "./db/migrations"
+      }
+    ],
+    "name": "void-test"
   },
-  "text": "{\n  \"account_id\": \"e4b1dc11b2e662580eb67ecc5141d582\",\n  \"compatibility_date\": \"2026-02-24\"\n}\n"
+  "text": "{\n  \"account_id\": \"e4b1dc11b2e662580eb67ecc5141d582\",\n  \"compatibility_date\": \"2026-02-24\",\n  \"d1_databases\": [\n    {\n      \"binding\": \"DB\",\n      \"database_name\": \"void-test-db\",\n      \"database_id\": \"98886566-7fb8-4026-9701-87ccdf66102b\",\n      \"migrations_dir\": \"./db/migrations\"\n    }\n  ],\n  \"name\": \"void-test\"\n}\n"
 }
