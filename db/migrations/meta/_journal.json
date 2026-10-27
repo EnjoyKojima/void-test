@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1793067136646,
+      "tag": "20261027021216_handy_exiles",
+      "breakpoints": true
+    }
+  ]
+}
