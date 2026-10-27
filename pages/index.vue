@@ -1,22 +1,18 @@
 <script setup lang="ts">
 import type { Props } from "./index.server";
 import { Form, useForm } from "@void/vue";
-import { fetch } from 'void/client';
 
 defineProps<Props>();
 const form = useForm("/", { text: "" });
 
 console.log(777)
 
-const hoge = await fetch('/api/hello')
+// const hoge = await fetch('/api/hello')
 </script>
 
 <template>
   <main>
     <h1>Welcome to Void</h1>
-    <pre>
-      {{ hoge }}
-    </pre>
     <p>
       This starter is running in Pages mode. The list below is loaded from your database in
       <code>pages/index.server.ts</code>.
@@ -37,7 +33,7 @@ const hoge = await fetch('/api/hello')
     </ul>
     <Form :form="form">
       <label>Message <input v-model="form.data.text" /></label>
-      <button :disabled="form.pending">Add message</button>
+      <button :disabled="form.pending">メッセージ送信</button>
     </Form>
   </main>
 </template>

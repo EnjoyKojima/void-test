@@ -9,8 +9,11 @@ export const loader = defineHandler(async () => {
   const rows = await db.select().from(messages).orderBy(desc(messages.id));
   return { messages: rows };
 });
+
 export const action = defineHandler.withValidator({
-  body: createInsertSchema(messages, { text: schema => schema.trim().min(1).max(1000) }).pick({ text: true }),
-})(async (_c, { body }) => {
+  body: createInsertSchema(messages, { text: schema => schema.trim().min(1, '空ですよ').max(10, '10文字以内にしてね') }).pick({ text: true }),
+})(async (c, { body }) => {
+  console.log('add msg')
   await db.insert(messages).values(body);
+  return c.redirect('/all')
 });
