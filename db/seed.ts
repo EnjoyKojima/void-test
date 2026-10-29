@@ -1,11 +1,11 @@
-import { defineSeed } from "void/seed";
+import { defineSeed } from 'void/seed'
 
-const SAMPLE_MESSAGES = ["Hello from Void"];
+const SAMPLE_MESSAGES = ['Hello from Void']
 
-export default defineSeed<typeof import("./schema")>(async ({ db, schema }) => {
+export default defineSeed<typeof import('./schema')>(async ({ db, schema }) => {
   await db.insert(schema.messages).values(
     SAMPLE_MESSAGES.map((text) => ({
       text,
     })),
-  );
-});
+  )
+})

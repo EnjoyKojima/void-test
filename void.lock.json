@@ -12,7 +12,33 @@
         "migrations_dir": "./db/migrations"
       }
     ],
-    "name": "void-test"
+    "name": "void-test",
+    "durable_objects": {
+      "bindings": [
+        {
+          "name": "CHATROOM",
+          "class_name": "ChatRoomDurableObject"
+        },
+        {
+          "name": "WsChatWs",
+          "class_name": "WsChatWs"
+        }
+      ]
+    },
+    "migrations": [
+      {
+        "tag": "void-durable-chatroom-v1",
+        "new_sqlite_classes": [
+          "ChatRoomDurableObject"
+        ]
+      },
+      {
+        "tag": "void-ws-v1",
+        "new_sqlite_classes": [
+          "WsChatWs"
+        ]
+      }
+    ]
   },
-  "text": "{\n  \"account_id\": \"e4b1dc11b2e662580eb67ecc5141d582\",\n  \"compatibility_date\": \"2026-02-24\",\n  \"d1_databases\": [\n    {\n      \"binding\": \"DB\",\n      \"database_name\": \"void-test-db\",\n      \"database_id\": \"98886566-7fb8-4026-9701-87ccdf66102b\",\n      \"migrations_dir\": \"./db/migrations\"\n    }\n  ],\n  \"name\": \"void-test\"\n}\n"
+  "text": "{\n  \"account_id\": \"e4b1dc11b2e662580eb67ecc5141d582\",\n  \"compatibility_date\": \"2026-02-24\",\n  \"d1_databases\": [\n    {\n      \"binding\": \"DB\",\n      \"database_name\": \"void-test-db\",\n      \"database_id\": \"98886566-7fb8-4026-9701-87ccdf66102b\",\n      \"migrations_dir\": \"./db/migrations\"\n    }\n  ],\n  \"name\": \"void-test\",\n  \"durable_objects\": {\n    \"bindings\": [\n      {\n        \"name\": \"CHATROOM\",\n        \"class_name\": \"ChatRoomDurableObject\"\n      },\n      {\n        \"name\": \"WsChatWs\",\n        \"class_name\": \"WsChatWs\"\n      }\n    ]\n  },\n  \"migrations\": [\n    {\n      \"tag\": \"void-durable-chatroom-v1\",\n      \"new_sqlite_classes\": [\n        \"ChatRoomDurableObject\"\n      ]\n    },\n    {\n      \"tag\": \"void-ws-v1\",\n      \"new_sqlite_classes\": [\n        \"WsChatWs\"\n      ]\n    }\n  ]\n}\n"
 }

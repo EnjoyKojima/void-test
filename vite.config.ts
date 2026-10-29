@@ -1,7 +1,11 @@
-import { defineConfig } from "vite";
-import { voidPlugin } from "void";
-import { voidVue } from "@void/vue/plugin";
+import { defineConfig } from 'vite-plus'
+import { voidPlugin } from 'void'
+import { voidVue } from '@void/vue/plugin'
 
 export default defineConfig({
   plugins: [voidPlugin(), voidVue()],
-});
+  fmt: {
+    singleQuote: true,
+    semi: false,
+  },
+})

@@ -1,9 +1,9 @@
-import { defineHandler } from "void";
+import { defineHandler } from 'void'
 
 export const GET = defineHandler(() => {
   return {
-    message: "Hello from Void",
-    framework: "Vue",
-    database: "D1",
-  };
-});
+    message: 'Hello from Void',
+    framework: 'Vue',
+    database: 'D1',
+  }
+})
